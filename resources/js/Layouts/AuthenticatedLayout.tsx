@@ -12,7 +12,7 @@ export default function Authenticated({ user, header, children }: PropsWithChild
             <aside className="w-64 bg-white border-r border-gray-200 p-4">
                 <div className="flex items-center justify-center">
                     <Link href="/">
-                        <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" />
+                        <ApplicationLogo className="block h-10 w-auto fill-current text-gray-800" />
                     </Link>
                 </div>
                 <nav className="mt-6 flex justify-center pt-5">
@@ -26,7 +26,7 @@ export default function Authenticated({ user, header, children }: PropsWithChild
             <div className="flex-1 flex flex-col w-full">
                 {/* Navbar */}
                 <nav className="bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
-                    <div className="text-lg font-semibold">{header}</div>
+                    <div className="text-lg font-semibold text-center w-full">{header}</div>
                     <div className="relative">
                         <Dropdown>
                             <Dropdown.Trigger>
