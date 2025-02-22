@@ -43,5 +43,12 @@ Route::prefix('/data')->name('data.')->group(function () {
     Route::get('/status-telkom', [DataController::class, 'statusTelkom'])->name('status_telkom');
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/user', [LaporanController::class, 'index'])->name('user');
+});
 
 require __DIR__.'/auth.php';

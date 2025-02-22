@@ -16,12 +16,20 @@ export default function Authenticated({ user, header, children }: PropsWithChild
                         <ApplicationLogo className="block h-10 w-auto fill-current text-gray-800" />
                     </Link>
                 </div>
-                <nav className="mt-6 flex flex-col pt-5">
+                <nav className="mt-6 flex flex-col pt-5 space-y-5">
                     <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                         Home
                     </NavLink>
 
                     <DropdownData />
+
+                    <NavLink href={route('laporan')} active={route().current('laporan')}>
+                        Laporan
+                    </NavLink>
+
+                    <NavLink href={route('user')} active={route().current('user')}>
+                        Data User/Hak Akses
+                    </NavLink>
                 </nav>
             </aside>
 
