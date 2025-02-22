@@ -2,6 +2,7 @@ import { PropsWithChildren, ReactNode } from 'react';
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
+import DropdownData from '@/Components/DropdownData';
 import { Link } from '@inertiajs/react';
 import { User } from '@/types';
 
@@ -15,10 +16,12 @@ export default function Authenticated({ user, header, children }: PropsWithChild
                         <ApplicationLogo className="block h-10 w-auto fill-current text-gray-800" />
                     </Link>
                 </div>
-                <nav className="mt-6 flex justify-center pt-5">
+                <nav className="mt-6 flex flex-col pt-5">
                     <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                         Home
                     </NavLink>
+
+                    <DropdownData />
                 </nav>
             </aside>
 

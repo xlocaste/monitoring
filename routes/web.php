@@ -35,4 +35,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::prefix('/data')->name('data.')->group(function () {
+    Route::get('/pic', [DataController::class, 'pic'])->name('pic');
+    Route::get('/mitra', [DataController::class, 'mitra'])->name('mitra');
+    Route::get('/project', [DataController::class, 'project'])->name('project');
+    Route::get('/status-mitra', [DataController::class, 'statusMitra'])->name('status_mitra');
+    Route::get('/status-telkom', [DataController::class, 'statusTelkom'])->name('status_telkom');
+});
+
+
 require __DIR__.'/auth.php';
